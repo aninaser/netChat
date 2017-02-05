@@ -14,7 +14,7 @@ public class ChatClient extends Frame implements Runnable {
     public ChatClient (String title, InputStream i, OutputStream o) {
         //what is super? what is title?
         super (title);
-        //what is a buffered input stream?
+        //buffer keeps chat text from being sent one character at a time, as opposed to full comments sent at once
         this.i = new DataInputStream (new BufferedInputStream(i));
         this.o = new DataOutputStream(new BufferedOutputStream(o));
         setLayout(new BorderLayout());
